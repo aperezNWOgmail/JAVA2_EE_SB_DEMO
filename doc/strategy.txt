@@ -1,0 +1,9 @@
+/********************************************/
+-- STRATEGY
+/********************************************/
+
+-- [_] Deploy application locally.
+
+-- [_] Deploy application remotely.
+
+    -- [_] codesandbox.
