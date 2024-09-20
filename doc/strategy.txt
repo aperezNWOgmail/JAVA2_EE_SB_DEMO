@@ -7,3 +7,5 @@
 -- [_] Deploy application remotely.
 
     -- [_] codesandbox.
+
+    -- [_] SPRINGBOOT CORS POLICY.
