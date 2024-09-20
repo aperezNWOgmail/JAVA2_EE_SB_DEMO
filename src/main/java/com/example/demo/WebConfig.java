@@ -12,10 +12,10 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(@SuppressWarnings("null") CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:4200/,https://apereznwo.github.io/PWA_DEMO_ENV_TEST/") 
+                .allowedOrigins("http://localhost:4200/,https://apereznwo.github.io/")
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowedHeaders("Authorization", "Content-Type")
-                .allowCredentials(true); 
+                .allowCredentials(true);
 
     }
 }
