@@ -9,3 +9,7 @@
     -- [_] codesandbox.
 
     -- [_] SPRINGBOOT CORS POLICY.
+
+-- [_] JSON return.    
+
+-- [_] Database.    
