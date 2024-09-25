@@ -12,4 +12,15 @@
 
 -- [_] JSON return.    
 
--- [_] Database.    
+-- [_] Database.
+
+            I'd be glad to assist you with establishing a Java Spring Boot connection to a SQL Server database. 
+            Here's a comprehensive guide incorporating best practices and addressing potential issues:
+
+            1. Prerequisites:
+
+            --[x] a. Java Development Kit (JDK): Ensure you have a compatible JDK installed (e.g., JDK 11 or later).
+            --[x] b. Spring Boot: Set up a Spring Boot project using your preferred method (Spring Initializr, **Maven**, or Gradle).
+            --[x] c. SQL Server JDBC Driver: 
+                     --[x] Download the appropriate SQL Server JDBC driver from Microsoft's website 
+                     --[x] and add it to your project's classpath.
