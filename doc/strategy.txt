@@ -12,6 +12,8 @@
 
 -- [_] JSON return.    
 
+-- [_] Getting properties values.    
+
 -- [_] Database.
 
             I'd be glad to assist you with establishing a Java Spring Boot connection to a SQL Server database. 

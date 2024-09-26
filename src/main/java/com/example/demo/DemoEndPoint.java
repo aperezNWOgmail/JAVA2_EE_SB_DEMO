@@ -10,29 +10,25 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DemoEndPoint {
-
-    private final LogTableDAO userDAO = new LogTableDAO();
-
+    //
+    private final AccessLogDAO accessLogDAO = new AccessLogDAO();
+    //
     @GetMapping("/hello")
     public String hello() {
         return "Hello, world!";
     }
-
-    @GetMapping("/data")
-    public MyData getData() {
-        MyData data = new MyData();
-        data.setName("John Doe");
-        data.setAge(30);
-        return data;
-    }
-
     // Get All Users
-    @GetMapping("/getAllUsers")
-    public ResponseEntity<List<User>> getAllUsers() {
-        try {
-            List<User> users = userDAO.selectAllUsers();
-            return ResponseEntity.ok(users);
-        } catch (SQLException e) {
+    @GetMapping("/getAllLogs")
+    public ResponseEntity<List<AccessLog>> getAllLogs() 
+    {
+        try 
+        {
+            //
+            List<AccessLog> accessLog = accessLogDAO.getAllLogs();
+            return ResponseEntity.ok(accessLog);
+        } 
+        catch (SQLException e) 
+        {
             return ResponseEntity.status(500).body(null);
         }
     }
