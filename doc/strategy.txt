@@ -24,3 +24,7 @@
             --[x] c. SQL Server JDBC Driver: 
                      --[x] Download the appropriate SQL Server JDBC driver from Microsoft's website 
                      --[x] and add it to your project's classpath.
+
+"La propiedad "encrypt" está establecida en "true" y la propiedad "trustServerCertificate" está establecida en "false", 
+pero el controlador no pudo establecer una conexión segura a SQL Server mediante el cifrado de Capa de sockets seguros (SSL): 
+Error: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target. ClientConnectionId:74b59248-1e8d-4b9d-834d-24a4af036d0b"              
