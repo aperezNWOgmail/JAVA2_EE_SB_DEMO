@@ -44,8 +44,8 @@ public class AccessLogDAO {
                             AL.[ID_column] desc
                         """;
         //                
-        List<AccessLog> accessLog    = new ArrayList<>();
-        try (Connection connection   = getConnection();
+        List<AccessLog> accessLogs    = new ArrayList<>();
+        try (Connection connection    = getConnection();
             //
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet rs                        = preparedStatement.executeQuery()) {
@@ -57,10 +57,10 @@ public class AccessLogDAO {
                 String accessDate  = rs.getString("accessDate");
                 String ipValue     = rs.getString("ipValue");
                 //
-                accessLog.add(new AccessLog(id_column, pageName, accessDate, ipValue));
+                accessLogs.add(new AccessLog(id_column, pageName, accessDate, ipValue));
             }
         }
-        return accessLog;
+        return accessLogs;
     }
 
     

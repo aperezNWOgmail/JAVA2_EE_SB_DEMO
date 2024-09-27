@@ -2,24 +2,24 @@ package com.example.demo;
 // JSON name convention is camelCase
 public class AccessLog {
     //
-    private long   id_column;
+    private long   id_Column;
     private String pageName;
     private String accessDate;
     private String ipValue;
     //
-    public AccessLog(long id_column, String pageName, String accessDate, String ipValue) {
-        this.id_column      = id_column;
+    public AccessLog(long id_Column, String pageName, String accessDate, String ipValue) {
+        this.id_Column      = id_Column;
         this.pageName       = pageName;
         this.accessDate     = accessDate;
         this.ipValue        = ipValue;
     }
     // Getters and Setters
-    public long getid_column() {
-        return id_column;
+    public long getid_Column() {
+        return id_Column;
     }
 
-    public void setID_columnn(long id_column) {
-        this.id_column = id_column;
+    public void setID_Columnn(long id_column) {
+        this.id_Column = id_column;
     }
 
     public String getpageName() {
