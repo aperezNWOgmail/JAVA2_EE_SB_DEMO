@@ -19,7 +19,7 @@ public class AccessLogDAO {
     // JSON name convention is camelCase
     public List<AccessLog> getAllLogs() throws SQLException {
         String sql =    """ 
-                        SELECT 
+                        SELECT TOP 100
                                AL.[ID_column]     AS id_column 
                              , AL.[PageName]      AS pageName
                              , AL.[AccessDate]    AS accessDate
