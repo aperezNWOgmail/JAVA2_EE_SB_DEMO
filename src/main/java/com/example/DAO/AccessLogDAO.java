@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.DAO;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.example.Entities.AccessLogTable;
 
 public class AccessLogDAO {
     
@@ -17,7 +19,7 @@ public class AccessLogDAO {
         return DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
     }
     // JSON name convention is camelCase
-    public List<AccessLog> getAllLogs() throws SQLException {
+    public List<AccessLogTable> getAllLogs() throws SQLException {
         String sql =    """ 
                         SELECT TOP 100
                                AL.[ID_column]     AS id_column 
@@ -44,7 +46,7 @@ public class AccessLogDAO {
                             AL.[ID_column] desc
                         """;
         //                
-        List<AccessLog> accessLogs    = new ArrayList<>();
+        List<AccessLogTable> accessLogs    = new ArrayList<>();
         try (Connection connection    = getConnection();
             //
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -57,7 +59,7 @@ public class AccessLogDAO {
                 String accessDate  = rs.getString("accessDate");
                 String ipValue     = rs.getString("ipValue");
                 //
-                accessLogs.add(new AccessLog(id_column, pageName, accessDate, ipValue));
+                accessLogs.add(new AccessLogTable(id_column, pageName, accessDate, ipValue));
             }
         }
         return accessLogs;

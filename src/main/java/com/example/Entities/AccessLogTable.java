@@ -1,13 +1,13 @@
-package com.example.demo;
+package com.example.Entities;
 // JSON name convention is camelCase
-public class AccessLog {
+public class AccessLogTable {
     //
     private long   id_Column;
     private String pageName;
     private String accessDate;
     private String ipValue;
     //
-    public AccessLog(long id_Column, String pageName, String accessDate, String ipValue) {
+    public AccessLogTable(long id_Column, String pageName, String accessDate, String ipValue) {
         this.id_Column      = id_Column;
         this.pageName       = pageName;
         this.accessDate     = accessDate;
