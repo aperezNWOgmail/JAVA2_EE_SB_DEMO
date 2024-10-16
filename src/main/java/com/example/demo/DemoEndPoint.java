@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.DAO.AccessLogDAO;
-import com.example.Entities.AccessLogTable;
+import com.example.entities.accessLogTable;
 
 
 @RestController
@@ -22,12 +22,12 @@ public class DemoEndPoint {
     }
     // Get All Users
     @GetMapping("/getAllLogs")
-    public ResponseEntity<List<AccessLogTable>> getAllLogs() 
+    public ResponseEntity<List<accessLogTable>> getAllLogs() 
     {
         try 
         {
             //
-            List<AccessLogTable> accessLog = accessLogDAO.getAllLogs();
+            List<accessLogTable> accessLog = accessLogDAO.getAllLogs();
             return ResponseEntity.ok(accessLog);
         } 
         catch (SQLException e) 

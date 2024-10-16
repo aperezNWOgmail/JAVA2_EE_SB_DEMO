@@ -29,4 +29,34 @@
 
 "La propiedad "encrypt" está establecida en "true" y la propiedad "trustServerCertificate" está establecida en "false", 
 pero el controlador no pudo establecer una conexión segura a SQL Server mediante el cifrado de Capa de sockets seguros (SSL): 
-Error: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target. ClientConnectionId:74b59248-1e8d-4b9d-834d-24a4af036d0b"              
+Error: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target. ClientConnectionId:74b59248-1e8d-4b9d-834d-24a4af036d0b"   
+
+-- [_] reading properties.
+
+    -- [_] GET VERSION.
+
+-- [_] CSV DEMO.
+
+    -- [x] Connection string (7gual al anterior).
+
+    -- [_] SQL QUERY. 
+
+     SELECT 
+         [Id_Column]
+        ,[NombreCompleto]
+        ,[ProfesionOficio]
+        ,[Ciudad]
+    FROM
+        [dbo].[Persona]
+    ORDER BY 
+        Id_Column
+
+    -- [_] ENTITY
+
+    public partial class Persona
+    {
+        public int ID_column { get; set; }
+        public string NombreCompleto { get; set; }
+        public string ProfesionOficio { get; set; }
+        public string Ciudad { get; set; }
+    }
