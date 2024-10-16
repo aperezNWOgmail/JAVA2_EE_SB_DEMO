@@ -9,15 +9,16 @@ package com.example.entity;
 public class personaTable {
     //
     private long id_Column;
-    private String nombreCompleto;
-    private String profesionOficio;
     private String ciudad;
+    private String nombreCompleto;
+    // private String profesionOficio;
 
-    public personaTable(long id_Column, String nombreCompleto, String profesionOficio,String ciudad) {
-        this.id_Column       = id_Column;
-        this.nombreCompleto  = nombreCompleto;
-        this.profesionOficio = profesionOficio;
-        this.ciudad          = ciudad;
+    public personaTable(long id_Column, String ciudad, String nombreCompleto /* ,String profesionOficio */) {
+        this.id_Column = id_Column;
+        this.ciudad = ciudad;
+        this.nombreCompleto = nombreCompleto;
+        // this.profesionOficio = profesionOficio;
+
     }
 
     public long getId_Column() {
@@ -28,22 +29,6 @@ public class personaTable {
         this.id_Column = id_Column;
     }
 
-    public String getNombreCompleto() {
-        return nombreCompleto;
-    }
-
-    public void setNombreCompleto(String nombreCompleto) {
-        this.nombreCompleto = nombreCompleto;
-    }
-
-    public String getProfesionOficio() {
-        return profesionOficio;
-    }
-
-    public void setProfesionOficio(String profesionOficio) {
-        this.profesionOficio = profesionOficio;
-    }
-
     public String getCiudad() {
         return ciudad;
     }
@@ -51,4 +36,22 @@ public class personaTable {
     public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
     }
+
+    public String getNombreCompleto() {
+        return nombreCompleto;
+    }
+
+    public void setNombreCompleto(String nombreCompleto) {
+        this.nombreCompleto = nombreCompleto;
+    }
+    /*
+     * /
+     * public String getProfesionOficio() {
+     * return profesionOficio;
+     * }
+     * 
+     * public void setProfesionOficio(String profesionOficio) {
+     * this.profesionOficio = profesionOficio;
+     * }
+     */
 }

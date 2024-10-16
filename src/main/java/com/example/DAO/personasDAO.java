@@ -24,9 +24,9 @@ public class personasDAO {
         String sql = """
                     SELECT
                         [Id_Column]            AS id_column
-                        ,[NombreCompleto]      AS nombreCompleto
-                        ,[ProfesionOficio]     AS profesionOficio
                         ,[Ciudad]              AS ciudad
+                        ,[NombreCompleto]      AS nombreCompleto
+                        /*,[ProfesionOficio]   AS profesionOficio*/
                     FROM
                         [dbo].[Persona]
                     ORDER BY
@@ -42,11 +42,12 @@ public class personasDAO {
             while (rs.next()) {
                 //
                 long id_Column = rs.getLong("id_column");
-                String nombreCompleto = rs.getString("nombreCompleto");
-                String profesionOficio = rs.getString("profesionOficio");
                 String ciudad = rs.getString("ciudad");
+                String nombreCompleto = rs.getString("nombreCompleto");
+                // String profesionOficio = rs.getString("profesionOficio");
+
                 //
-                personas.add(new personaTable(id_Column, nombreCompleto, profesionOficio, ciudad));
+                personas.add(new personaTable(id_Column, ciudad, nombreCompleto /* , profesionOficio */));
             }
         }
         return personas;
