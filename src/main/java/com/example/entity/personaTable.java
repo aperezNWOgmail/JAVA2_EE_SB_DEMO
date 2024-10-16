@@ -13,11 +13,11 @@ public class personaTable {
     private String profesionOficio;
     private String ciudad;
 
-    public personaTable(String ciudad, long id_Column, String nombreCompleto, String profesionOficio) {
-        this.ciudad = ciudad;
-        this.id_Column = id_Column;
-        this.nombreCompleto = nombreCompleto;
+    public personaTable(long id_Column, String nombreCompleto, String profesionOficio,String ciudad) {
+        this.id_Column       = id_Column;
+        this.nombreCompleto  = nombreCompleto;
         this.profesionOficio = profesionOficio;
+        this.ciudad          = ciudad;
     }
 
     public long getId_Column() {

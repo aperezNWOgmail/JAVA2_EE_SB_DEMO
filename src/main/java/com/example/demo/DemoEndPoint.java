@@ -8,13 +8,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.DAO.AccessLogDAO;
+import com.example.DAO.personasDAO;
 import com.example.entity.accessLog;
+import com.example.entity.personaTable;
 
 @RestController
 public class DemoEndPoint {
     //
-    private final AccessLogDAO accessLogDAO = new AccessLogDAO();
-
+    private final AccessLogDAO accessLogDAO  = new AccessLogDAO();
+    private final personasDAO  _personasDAO  = new personasDAO();
     //
     @GetMapping("/hello")
     public String hello() {
@@ -28,6 +30,17 @@ public class DemoEndPoint {
             //
             List<accessLog> accessLog = accessLogDAO.getAllLogs();
             return ResponseEntity.ok(accessLog);
+        } catch (SQLException e) {
+            return ResponseEntity.status(500).body(null);
+        }
+    }
+    // Get All Users
+    @GetMapping("/getAllPersons")
+    public ResponseEntity<List<personaTable>> getPersons() {
+        try {
+            //
+            List<personaTable> personas = _personasDAO.getAllPersons();
+            return ResponseEntity.ok(personas);
         } catch (SQLException e) {
             return ResponseEntity.status(500).body(null);
         }
