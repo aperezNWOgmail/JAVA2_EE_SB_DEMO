@@ -4,19 +4,19 @@
         public string ProfesionOficio { get; set; }
         public string Ciudad { get; set; }
 */
-package com.example.entities;
+package com.example.entity;
 
 public class personaTable {
     //
-    private long   id_Column;
+    private long id_Column;
     private String nombreCompleto;
     private String profesionOficio;
     private String ciudad;
 
     public personaTable(String ciudad, long id_Column, String nombreCompleto, String profesionOficio) {
-        this.ciudad          = ciudad;
-        this.id_Column       = id_Column;
-        this.nombreCompleto  = nombreCompleto;
+        this.ciudad = ciudad;
+        this.id_Column = id_Column;
+        this.nombreCompleto = nombreCompleto;
         this.profesionOficio = profesionOficio;
     }
 

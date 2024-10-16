@@ -1,18 +1,21 @@
-package com.example.entities;
+package com.example.entity;
+
 // JSON name convention is camelCase
-public class accessLogTable {
+public class accessLog {
     //
-    private long   id_Column;
+    private long id_Column;
     private String pageName;
     private String accessDate;
     private String ipValue;
+
     //
-    public accessLogTable(long id_Column, String pageName, String accessDate, String ipValue) {
-        this.id_Column      = id_Column;
-        this.pageName       = pageName;
-        this.accessDate     = accessDate;
-        this.ipValue        = ipValue;
+    public accessLog(long id_Column, String pageName, String accessDate, String ipValue) {
+        this.id_Column = id_Column;
+        this.pageName = pageName;
+        this.accessDate = accessDate;
+        this.ipValue = ipValue;
     }
+
     // Getters and Setters
     public long getid_Column() {
         return id_Column;
@@ -45,6 +48,5 @@ public class accessLogTable {
     public void setIpValue(String ipValue) {
         this.ipValue = ipValue;
     }
-
 
 }
