@@ -22,15 +22,15 @@ public class personasDAO {
     // JSON name convention is camelCase
     public List<personaTable> getAllPersons() throws SQLException {
         String sql = """
-                    SELECT 
+                    SELECT
                         [Id_Column]            AS id_column
                         ,[NombreCompleto]      AS nombreCompleto
                         ,[ProfesionOficio]     AS profesionOficio
                         ,[Ciudad]              AS ciudad
                     FROM
                         [dbo].[Persona]
-                    ORDER BY 
-                        Id_Column   desc                 
+                    ORDER BY
+                        Id_Column   asc
                 """;
         //
         List<personaTable> personas = new ArrayList<>();
@@ -41,10 +41,10 @@ public class personasDAO {
             //
             while (rs.next()) {
                 //
-                long id_Column         = rs.getLong("id_column");
-                String nombreCompleto  = rs.getString("nombreCompleto");
+                long id_Column = rs.getLong("id_column");
+                String nombreCompleto = rs.getString("nombreCompleto");
                 String profesionOficio = rs.getString("profesionOficio");
-                String ciudad          = rs.getString("ciudad");
+                String ciudad = rs.getString("ciudad");
                 //
                 personas.add(new personaTable(id_Column, nombreCompleto, profesionOficio, ciudad));
             }
