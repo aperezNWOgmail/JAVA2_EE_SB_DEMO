@@ -23,7 +23,7 @@ public class DemoEndPoint {
         return "Hello, world!";
     }
 
-    // Get All Users
+    // Get All LOGS
     @GetMapping("/getAllLogs")
     public ResponseEntity<List<accessLog>> getAllLogs() {
         try {
@@ -34,7 +34,7 @@ public class DemoEndPoint {
             return ResponseEntity.status(500).body(null);
         }
     }
-    // Get All Users
+    // Get All PERSONS
     @GetMapping("/getAllPersons")
     public ResponseEntity<List<personaTable>> getPersons() {
         try {
@@ -44,5 +44,11 @@ public class DemoEndPoint {
         } catch (SQLException e) {
             return ResponseEntity.status(500).body(null);
         }
+    }
+    // GenerateRandomVertex_SpringBoot
+    //
+    @GetMapping("/GenerateRandomVertex_SpringBoot")
+    public String GenerateRandomVertex_SpringBoot() {
+        return "[2,20]|[15,22]|[1,17]|[8,19]|[14,6]|[13,8]|[5,12]|[4,14]|[22,5]■{0,0,0,6,18,16,0,0,0}|{0,0,14,0,0,0,0,0,18}|{0,14,0,0,0,0,6,0,24}|{6,0,0,0,0,12,0,6,0}|{18,0,0,0,0,0,0,0,0}|{16,0,0,12,0,0,8,0,0}|{0,0,6,0,0,8,0,2,18}|{0,0,0,6,0,0,2,0,0}|{0,18,24,0,0,0,18,0,0}■00&lt;[2;20]&gt;-00-<br/>01&lt;[15;22]&gt;-34-[0;3]≡[3;7]≡[7;6]≡[6;2]≡[2;1]≡<br/>02&lt;[1;17]&gt;-20-[0;3]≡[3;7]≡[7;6]≡[6;2]≡<br/>03&lt;[8;19]&gt;-06-[0;3]≡<br/>04&lt;[14;6]&gt;-18-[0;4]≡<br/>05&lt;[13;8]&gt;-16-[0;5]≡<br/>06&lt;[5;12]&gt;-14-[0;3]≡[3;7]≡[7;6]≡<br/>07&lt;[4;14]&gt;-12-[0;3]≡[3;7]≡<br/>08&lt;[22;5]&gt;-32-[0;3]≡[3;7]≡[7;6]≡[6;8]≡";
     }
 }
