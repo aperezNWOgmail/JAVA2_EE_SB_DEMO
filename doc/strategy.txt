@@ -381,5 +381,8 @@ public class RandomPointGenerator {
 
 -- [_] CRUD MARKETING.
 
+-- [_] generateRandomPoints(int vertexSize, int sampleSize, int sourcePoint) {
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
