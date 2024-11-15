@@ -54,17 +54,24 @@ public class GFG {
             sptSet[u] = true;
 
             // Update dist value of the adjacent vertices of the picked vertex.
-            for (int v = 0; v < vertexSize; v++)
-                // Update dist[v] only if is not in sptSet, there is an edge from u
-                // to v, and total weight of path from src to v through u is smaller
-                // than current value of dist[v]
-                if (!sptSet[v] && 
-                    graph[u][v] != 0 && 
-                    dist[u] != Integer.MAX_VALUE && 
+            for (int v = 0; v < vertexSize; v++) {
+
+                // Update dist[v] only if is not in 
+                // sptSet, there is an edge from u 
+                // to v, and total weight of path 
+                // from src to v through u is smaller 
+                // than current value of dist[v] 
+                if (!sptSet[v] 
+                    && 
+                    graph[u][v] != 0 
+                    &&
+                    dist[u] != Integer.MAX_VALUE 
+                    && 
                     dist[u] + graph[u][v] < dist[v]) {
                     dist[v] = dist[u] + graph[u][v];
-                    path.set(v, path.get(u) + String.format("%d ", u));
+                    path.set(v, path.get(u) + String.format("[%d,%d]≡", u, v));
                 }
+            }
         }
     }
 }

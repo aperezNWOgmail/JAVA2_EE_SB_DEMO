@@ -173,14 +173,37 @@ public class AlgorithmManager {
                 }
     
                 String separator = (index < (t.dist.length - 1)) ? "," : "";
-                
+                //1. x 01
+                //2. x <[6;8]>
+                //3. x -41
+                //4. x -[0;3]≡[3;7]≡[7;6]≡[6;2]≡[2;1]≡
+                //5. x <br/>
                 status.append(String.format("%s<%s>-%s-%s%s",
+                        //[OK] 1. x 01
                         String.format(integerFormat, index),
+                        //[OK] 2. x <[6;8]>
                         vertex.get(index).replace(",", ";").replace("|", ""),
+                        //[OK] 3. x -41
                         String.format(integerFormat, t.dist[index]),
+                        //[OK] 4. x -[0;3]≡[3;7]≡[7;6]≡[6;2]≡[2;1]≡
                         t.path.get(index).replace(",", ";"),
+                        //[OK] 5. x <br/>
                         separator
                 ));
+
+                /*  CORRECT0
+                   00<[5;19]>-00-<br/>
+                   01<[6;8]>-41-[0;3]≡[3;7]≡[7;6]≡[6;2]≡[2;1]≡<br/>
+                   02<[10;9]>-37-[0;3]≡[3;7]≡[7;6]≡[6;2]≡<br/>
+                   03<[11;14]>-07-[0;3]≡<br/>
+                   04<[4;12]>-07-[0;4]≡<br/>
+                   05<[16;6]>-16-[0;3]≡[3;5]≡<br/>
+                   06<[18;20]>-24-[0;3]≡[3;7]≡[7;6]≡<br/>
+                   07<[19;11]>-15-[0;3]≡[3;7]≡<br/>
+                   08<[20;1]>-43-[0;3]≡[3;7]≡[7;6]≡[6;8]≡
+                */
+
+     
             }
             //
             return status.toString();
